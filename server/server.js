@@ -1,3 +1,4 @@
+//sic parvis magna
 const express = require("express"); //Importing the express module to set up the server
 
 const path = require("path");
@@ -6,7 +7,7 @@ const sequelize = require("./config/connection"); //Importing connection file to
 
 const api = require("./routes/index"); //Importing the index.js file file from the routes folder
 
-require("dotenv").config(); //Importing the .env file so that the environment variables are configured accordingly when the server is started
+require("dotenv").config(); //Importing dotenv file/library to sync environment varibales
 
 const app = express(); //Creating a new instance of the express module and saving it in the app variable
 
@@ -18,6 +19,6 @@ app.use(express.urlencoded({ extended: true })); //Middleware so that informatio
 app.use("/api", api); //Custom middleware telling the server to use the index file from the routes folder once server has started
 
 //Syncing the database with the server, asking sequelize not to drop and create new models every time the server starts and asking the server to start and for the app to listen on PORT varibale
-sequelize.sync({ force: flase }).then(() => {
+sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log(`Now listening on Port: ${PORT}`));
 });
