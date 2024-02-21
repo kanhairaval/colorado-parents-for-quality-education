@@ -20,7 +20,7 @@ UserDonationInfo.init(
             type: DataTypes.STRING(20),
         },
         last_name: {
-            type: DataTypes.SRING(20),
+            type: DataTypes.STRING(20),
             allowNull: false,
         },
         email: {
