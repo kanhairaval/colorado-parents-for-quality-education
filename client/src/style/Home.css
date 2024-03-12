@@ -1,0 +1,22 @@
+.home-section {
+    height: 45vh; /* Set to 40-45% of the viewport height */
+    position: relative;
+}
+  
+.home-bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio; cover entire container */
+    object-position: center; /* Center the image */
+}
+  
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: blue;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}

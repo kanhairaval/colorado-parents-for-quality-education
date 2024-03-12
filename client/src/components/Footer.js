@@ -5,7 +5,7 @@ import "../style/Tailwind.css";
 function Footer() {
   return (
     <FlowbiteFooter container>
-      <FlowbiteFooter.Copyright href="#" by="Flowbite™" year={2022} />
+      <FlowbiteFooter.Copyright href="#" by="CPQE™" year={2024} />
       <FlowbiteFooter.LinkGroup>
         <FlowbiteFooter.Link href="#">About</FlowbiteFooter.Link>
         <FlowbiteFooter.Link href="#">Privacy Policy</FlowbiteFooter.Link>
