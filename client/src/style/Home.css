@@ -5,7 +5,7 @@
   
 .home-bg-image {
     width: 100%;
-    height: 45%;
+    /* height: 45%; */
     object-fit: cover; /* Maintain aspect ratio; cover entire container */
     object-position: center; /* Center the image */
 }
