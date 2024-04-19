@@ -1,124 +1,131 @@
 .navbar {
-  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease;
+  padding: 10px 20px;
+  background-color: #fff; /* Navbar background color */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow */
 }
 
-.navbar-logo img {
-  max-width: 120px;
+.logo img {
+  width: 100px;
 }
 
-.navbar-links {
+.nav-links {
   display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  gap: 20px;
+  margin-left: auto;
 }
 
-.nav-item {
-  margin-right: 20px;
-}
-
-.nav-link {
+.nav-links a {
   text-decoration: none;
   color: #333;
-  font-weight: bold;
-  transition: color 0.3s ease;
 }
 
-.nav-link:hover {
-  color: #007bff;
+.nav-links a:hover {
+  color: #000;
 }
 
-.navbar-toggle {
+.nav-links ul {
+  list-style: none; /* Remove default list styling */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Ensure the links are displayed horizontally */
+}
+
+.nav-links li {
+  margin-right: 20px; /* Add space between the links */
+}
+
+/* Media queries for responsive design */
+
+/* Add media query to hide the burger icon on larger screens */
+@media screen and (min-width: 769px) {
+  .navbar-toggle {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex !important; /* Ensure the links are displayed horizontally */
+  }
+
+  .navbar {
+    justify-content: space-between; /* Align the logo to the left and links to the right */
+  }
+}
+
+/* Add media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hide the links by default on small screens */
+  }
+  
+  .navbar.active .nav-links {
+    display: flex; /* Show the links when the burger menu is active */
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+}
+
+.burger-menu {
   display: none;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30px;
-  height: 25px;
-  cursor: pointer;
-  border: none;
-  background: transparent;
-  z-index: 1000;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 200px;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-toggle span {
-  display: block;
-  width: 100%;
-  height: 3px;
-  background-color: #333;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+.burger-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px;
 }
 
-.navbar-toggle.active span:nth-child(1) {
-  transform: translateY(8px) rotate(45deg);
+.burger-menu li {
+  margin-bottom: 15px;
 }
 
-.navbar-toggle.active span:nth-child(2) {
-  opacity: 0;
+.burger-menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 18px;
 }
 
-.navbar-toggle.active span:nth-child(3) {
-  transform: translateY(-8px) rotate(-45deg);
+.burger-menu a:hover {
+  color: #000;
 }
 
 @media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 20px;
-  }
-
-  .navbar-logo {
-    margin-bottom: 20px;
-  }
-
-  .navbar-links {
-    display: none;
-    width: 100%;
-    transition: all 0.3s ease;
-    position: absolute;
-    left: 0;
-    top: 100%;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 999;
-  }
-
-  .navbar.active .navbar-links {
-    display: flex;
-    flex-direction: column;
-  }
-
-  .navbar-nav {
-    flex-direction: column;
-    padding: 10px 20px;
-  }
-
-  .nav-item {
-    margin-right: 0;
-    margin-bottom: 10px;
-  }
-
   .navbar-toggle {
     display: block;
   }
-}
 
-/* Exalted effect */
-.navbar:hover {
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
-  background-color: #f8f9fa;
-}
+  .nav-links {
+    display: none;
+  }
 
-@media screen and (max-width: 768px) {
-  .navbar.active:hover {
-    box-shadow: none;
-    background-color: transparent;
+  .navbar.active .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+
+  .burger-menu {
+    display: block;
   }
 }
