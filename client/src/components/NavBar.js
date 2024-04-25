@@ -1,79 +1,42 @@
-import React, { useState } from "react";
-import "../style/NavBar.css";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import React from 'react';
+import * as ReactBootStrap from "react-bootstrap";
+import {
+    BrowserRouter as Router,
+    Link
+  } from "react-router-dom";
+import "../style/NavBar.css"; // Import your custom CSS file
 
 const NavBar = () => {
-  const [isActive, setIsActive] = useState(false);
-
-  const toggleMenu = () => {
-    setIsActive(!isActive);
-  };
-
-  const closeMenu = () => {
-    setIsActive(false);
-  };
-
-  return (
-    <nav className={`navbar ${isActive ? "active" : ""}`}>
-      <div className="logo">
-        <img src="/logo.png" alt="Logo" />
-      </div>
-      <div className="nav-links">
-        <ul>
-          <li>
-            <Link to="/" onClick={closeMenu}>
-              Home
-            </Link>
-          </li>
-          <li>
-            <Link to="/get-involved" onClick={closeMenu}>
-              Get Involved
-            </Link>
-          </li>
-          <li>
-            <Link to="/donate" onClick={closeMenu}>
-              Donate
-            </Link>
-          </li>
-          <li>
-            <Link to="/about-us" onClick={closeMenu}>
-              About Us
-            </Link>
-          </li>
-        </ul>
-      </div>
-      <button className="navbar-toggle" onClick={toggleMenu}>
-        {isActive ? <FaTimes /> : <FaBars />}
-      </button>
-      {isActive && (
-        <div className="burger-menu">
-          <ul>
-            <li>
-              <Link to="/" onClick={closeMenu}>
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/get-involved" onClick={closeMenu}>
-                Get Involved
-              </Link>
-            </li>
-            <li>
-              <Link to="/donate" onClick={closeMenu}>
-                Donate
-              </Link>
-            </li>
-            <li>
-              <Link to="/about-us" onClick={closeMenu}>
-                About Us
-              </Link>
-            </li>
-          </ul>
+    return(
+        <div className="App">
+    <ReactBootStrap.Navbar collapseOnSelect expand="xl" bg="light" variant="light">
+  <ReactBootStrap.Navbar.Brand href="#home">CPQE</ReactBootStrap.Navbar.Brand>
+  <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
+  <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
+    <ReactBootStrap.Nav className="mr-auto"> 
+      {/* Your existing links */}
+    </ReactBootStrap.Nav>
+    {/* Move these links to the right */}
+    <ReactBootStrap.Nav>
+      <Link to="/features">
+        <ReactBootStrap.Nav.Link href="#features">Home</ReactBootStrap.Nav.Link>
+      </Link>
+      <Link to="/pricing">
+        <ReactBootStrap.Nav.Link href="#pricing">Get Involved</ReactBootStrap.Nav.Link>
+      </Link>
+      <Link to="/deets">
+        <ReactBootStrap.Nav.Link href="#deets">Donate</ReactBootStrap.Nav.Link>
+      </Link>
+      <Link to="/dankmemes">
+        <ReactBootStrap.Nav.Link eventKey={2} href="#memes">
+            About Us
+        </ReactBootStrap.Nav.Link>
+      </Link>
+    </ReactBootStrap.Nav>
+  </ReactBootStrap.Navbar.Collapse>
+</ReactBootStrap.Navbar>
         </div>
-      )}
-    </nav>
-  );
-};
+    )
+}
 
 export default NavBar;
