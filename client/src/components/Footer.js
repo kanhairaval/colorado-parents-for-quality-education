@@ -1,18 +1,19 @@
 import React from 'react';
-import { Footer as FlowbiteFooter } from "flowbite-react";
-import "../style/Tailwind.css";
+import "../style/Footer.css";
 
-function Footer() {
+const Footer = () => {
   return (
-    <FlowbiteFooter container>
-      <FlowbiteFooter.Copyright href="#" by="CPQE™" year={2024} />
-      <FlowbiteFooter.LinkGroup>
-        <FlowbiteFooter.Link href="#">About</FlowbiteFooter.Link>
-        <FlowbiteFooter.Link href="#">Privacy Policy</FlowbiteFooter.Link>
-        <FlowbiteFooter.Link href="#">Licensing</FlowbiteFooter.Link>
-        <FlowbiteFooter.Link href="#">Contact</FlowbiteFooter.Link>
-      </FlowbiteFooter.LinkGroup>
-    </FlowbiteFooter>
+    <footer className="footer">
+      <div className="footer-links">
+        <a href="#">About Us</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Contact Us</a>
+        <a href="#">Donate</a>
+      </div>
+      <div className="footer-info">
+        <p>© 2024 CPQE™. All rights reserved.</p>
+      </div>
+    </footer>
   );
 };
 

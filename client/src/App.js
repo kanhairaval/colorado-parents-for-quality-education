@@ -6,6 +6,8 @@ import Component from './components/NavBar';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./components/Home";
 import Footer from "./components/Footer";
+import AboutUs from "./components/AboutUs";
+import GetInvolved from "./components/GetInvolved";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
       <NavBar/>
         <Routes>
           <Route path="/" Component={Home}/>
+          <Route path="/AboutUs" Component={AboutUs}/>
+          <Route path="/GetInvolved" Component={GetInvolved}/>
         </Routes>
         <Footer/>
     </Router>

@@ -14,6 +14,9 @@ const Home = () => {
                 <h1 className = "home-heading">The Issue</h1>
                 <h3>Education should be a basic human right for every person, not a luxury for the few.</h3>
                 <button className = "homepage-buttons">Learn More</button>
+                <h1 className = "home-heading">Our Mission</h1>
+                <h3>At Colorado Parents for Quality Education (CPQE), we believe knowledge is power. We empower parents, particularly those from low-income backgrounds, with the tools and resources they need to become active and informed participants in their children's education.</h3>
+                <button className = "homepage-buttons">Learn More</button>
                 <h1 className = "home-heading">Get Involved</h1>
                 <h3>With an issue like education for our future generation you cant sit on the sidelines, you can donate or ou can also get involved in oher ways.</h3>
                 <button className = "homepage-buttons">Learn More</button>

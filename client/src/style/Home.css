@@ -1,15 +1,14 @@
 .home-section {
-    height: 100vh; /* Set to 40-45% of the viewport height */
+    height: 100vh;
     position: relative;
 }
-  
+
 .home-bg-image {
     width: 100%;
-    /* height: 45%; */
-    object-fit: cover; /* Maintain aspect ratio; cover entire container */
-    object-position: center; /* Center the image */
+    object-fit: cover;
+    object-position: center;
 }
-  
+
 .overlay-text {
     position: absolute;
     top: 50%;
@@ -24,14 +23,16 @@
 .home-heading {
     font-weight: bold;
     text-align: center;
+    margin: 20px 0; /* Add margin for spacing between headings */
 }
 
 .button-container {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 0 20px; /* Add padding to the container */
 }
-  
+
 .homepage-buttons {
     display: inline-flex;
     align-self: center;
@@ -46,7 +47,47 @@
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
-  
+
 .homepage-buttons:hover {
     background-color: rgb(227, 183, 4);
+}
+
+/* Media queries for responsive design */
+
+/* Small screens */
+@media screen and (max-width: 576px) {
+    .home-section {
+        height: auto; /* Remove fixed height */
+    }
+  
+    .overlay-text {
+        font-size: 18px; /* Decrease font size */
+    }
+
+    .home-heading {
+        font-size: 18px; /* Decrease font size */
+    }
+
+    .button-container {
+        padding: 0 10px; /* Decrease padding */
+    }
+
+    .homepage-buttons {
+        font-size: 14px; /* Decrease font size */
+    }
+}
+
+/* Medium screens */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+    /* Adjust styles for medium screens if needed */
+}
+
+/* Large screens */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+    /* Adjust styles for large screens if needed */
+}
+
+/* Extra large screens */
+@media screen and (min-width: 993px) {
+    /* Adjust styles for extra large screens if needed */
 }
