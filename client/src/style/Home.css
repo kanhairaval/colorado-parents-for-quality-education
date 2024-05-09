@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .home-section {
     height: 100vh;
     position: relative;
@@ -51,7 +55,6 @@
 .homepage-buttons:hover {
     background-color: rgb(227, 183, 4);
 }
-
 /* Media queries for responsive design */
 
 /* Small screens */

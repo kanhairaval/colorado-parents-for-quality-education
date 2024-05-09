@@ -1,16 +1,15 @@
-import React from 'react';
+import React from "react";
 import "../style/Footer.css";
 
 const Footer = () => {
   return (
     <footer className="footer">
       <div className="footer-links">
-        <a href="#">About Us</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Contact Us</a>
-        <a href="#">Donate</a>
+        <a href="/privacy-policy">Privacy Policy</a>
+        <a href="/contact-us">Contact Us</a>
+        <a href="/donate">Donate</a>
       </div>
-      <div className="footer-info">
+      <div className="rights-reserved">
         <p>© 2024 CPQE™. All rights reserved.</p>
       </div>
     </footer>

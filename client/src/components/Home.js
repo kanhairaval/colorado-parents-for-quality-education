@@ -21,6 +21,7 @@ const Home = () => {
                 <h3>With an issue like education for our future generation you cant sit on the sidelines, you can donate or ou can also get involved in oher ways.</h3>
                 <button className = "homepage-buttons">Learn More</button>
             </div>
+            <div className="spacer"></div>
         </section>
     )
 };

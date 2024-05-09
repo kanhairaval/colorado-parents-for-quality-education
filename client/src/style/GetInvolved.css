@@ -12,11 +12,34 @@
 }
 
 .join-mission ul {
-    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 20px; /* Add bottom margin */
+}
+
+.join-mission ul li {
+    list-style: none; /* Remove default bullet points */
+}
+
+.join-mission ul li::before {
+    content: "\2022"; /* Add bullet character */
+    font-size: 1.5rem;
+    margin-right: 10px; /* Adjust spacing between bullet and text */
 }
 
 .join-mission ul li strong {
     font-weight: bold;
+}
+
+.join-mission ul li:last-child::before {
+    margin-left: -10px; /* Adjust this value as needed */
+}
+
+.space-above {
+    margin-top: 20px; /* Add space above Join Our Mission */
+}
+
+.space-below {
+    margin-bottom: 20px; /* Add space below each section */
 }
 
 /* Media queries for responsive design */
