@@ -17,9 +17,7 @@ body {
   display: flex;
   flex-wrap: wrap; /* Allow items to wrap to the next line */
   justify-content: center; /* Center items horizontally */
-  box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.2), /* Bottom shadow */
-              8px 0px 8px rgba(0, 0, 0, 0.2), /* Right side shadow */
-              -8px 0px 8px rgba(0, 0, 0, 0.2); /* Left side shadow */
+  box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.2);
   font-size: 16px; /* Set font size */
   font-weight: bold; /* Set font weight */
 }

@@ -3,6 +3,7 @@ import "../style/AboutUs.css";
 
 const AboutUs = () => {
   return (
+    <section className="content-wrapper">
     <section className="about-us">
       <div className="container">
         <h2 className="section-heading">Colorado Parents for Quality Education: Empowering Low-Income Parents</h2>
@@ -35,6 +36,7 @@ const AboutUs = () => {
           <li>Connect with other parents and build a supportive network, breaking down feelings of isolation.</li>
         </ul>
       </div>
+    </section>
     </section>
   );
 };

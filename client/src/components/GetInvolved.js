@@ -3,6 +3,7 @@ import "../style/GetInvolved.css";
 
 const GetInvolved = () => {
     return (
+        <section className="content-wrapper">
         <section className="get-involved-section">
             <div className="space-above"></div>
             <h1 className="get-involved-title"><strong>Join Our Mission</strong></h1>
@@ -20,6 +21,7 @@ const GetInvolved = () => {
                 <div className="space-below"></div>
             </div>
             <div className="space-below"></div>
+        </section>
         </section>
     );
 };

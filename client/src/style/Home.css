@@ -3,22 +3,15 @@
 @tailwind utilities;
 
 .home-section {
-    height: 100vh;
-    position: relative;
-}
-
-.home-bg-image {
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
+    margin-top: 80px;
 }
 
 .overlay-text {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-100%, -150%);
-    color: white;
+    transform: translate(-80%, -80%);
+    color:cadetblue;
     font-size: 24px;
     font-weight: bold;
     text-align: center;
@@ -55,6 +48,75 @@
 .homepage-buttons:hover {
     background-color: rgb(227, 183, 4);
 }
+
+.card {
+    background-color: white;
+    border-radius: 20px; /* For rounded corners */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Creates a 3D embossed effect */
+    margin: 20px auto; /* Adds margin for spacing */
+    padding: 20px; /* Adds padding inside the card */
+    width: 70%; /* Sets the width of the card to 70% of the screen width */
+    display: flex; /* Allows us to style the card-top and card-content elements */
+    flex-direction: column; /* Stacks the elements vertically */
+}
+
+.card-top {
+    position: relative; /* Allows us to position the card-top-image on top of the card-content */
+    overflow: hidden; /* Hides the overflowing part of the card-top-image */
+    border-radius: 20px 20px 0 0; /* Creates a curved top edge for the card */
+}
+
+.card-top-image {
+    width: 100%; /* Stretches the image to cover the entire card-top */
+    position: absolute; /* Positions the image on top of the card-content */
+    top: 0; /* Positions the image at the top of the card-top */
+    left: 0; /* Positions the image at the left of the card-top */
+}
+
+.card-content {
+    background-color: white; /* Ensures the content has a white background */
+    padding: 20px; /* Adds padding to create space around the content */
+    display: flex; /* Allows us to center the button horizontally */
+    flex-direction: column; /* Stacks the elements vertically */
+    justify-content: space-between; /* Vertically centers the content within the card */
+}
+
+.home-heading {
+    font-weight: bold;
+    text-align: center;
+    margin: 0; /* Remove default margin for spacing within the card */
+    margin-bottom: 10px; /* Add space between heading and content */
+}
+
+.donate-button {
+    display: inline-flex;
+    align-self: flex-end;
+}
+
+/* New rule for h3 text alignment and justification */
+.card-content h3 {
+    text-align: justify;
+    text-justify: inter-word; /* Ensures even spacing between words */
+}
+
+.spacer {
+    margin-bottom: 50px;
+}
+
+.hero-card {
+    background-color: black;
+    border-radius: 20px; /* For rounded corners */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Creates a 3D embossed effect */
+    margin: 20px auto; /* Adds margin for spacing */
+    padding: 20px; /* Adds padding inside the card */
+    width: 80%; /* Sets the width slightly larger than other cards */
+    display: flex; /* Allows us to style the image and text elements */
+    flex-direction: column; /* Stacks the elements vertically */
+}
+
+.hero-card img {
+    border-radius: 20px;
+  }
 /* Media queries for responsive design */
 
 /* Small screens */

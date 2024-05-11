@@ -1,3 +1,9 @@
+.content-wrapper {
+    min-height: 100vh; /* Set minimum height for full viewport */
+    margin-top: 100px; /* Add additional space above content (adjust as needed) */
+    padding-bottom: 60px; /* Add space before the footer */
+  }
+  
 .get-involved-section {
     text-align: center;
 }
