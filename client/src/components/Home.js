@@ -9,7 +9,9 @@ const Home = () => {
                 <div className="overlay-text">Colorado Parents for Quality Education - Informed Parents, Thriving Children</div>
             </div>
             <div className="button-container">
-                <div className="card">
+
+                <div className="text-image-div-1-3">
+                <div className="text-card">
                     <div className="card-top">
                         <div className="card-content">
                             <h1 className="home-heading">Welcome to Colorado Parents for Quality Education</h1>
@@ -20,7 +22,17 @@ const Home = () => {
                         </div>
                     </div>
                 </div>
-                <div className="card">
+                <div className="image-card">
+                <img className="home-card-image" alt="family-doing-homework" src="home_img_five.jpeg" />
+                </div>
+                </div>
+
+
+                <div className="text-image-div-2-4">
+                <div className="image-card">
+                <img className="home-card-image" alt="family-doing-homework" src="home_img_seven.jpeg" />
+                </div>
+                <div className="text-card">
                     <div className="card-top">
                         <div className="card-content">
                             <h1 className="home-heading">The Issue</h1>
@@ -29,7 +41,11 @@ const Home = () => {
                 </div>
                     </div>
                 </div>
-                <div className="card">
+                </div>
+
+
+                <div className="text-image-div-1-3">
+                <div className="text-card">
                     <div className="card-top">
                         <div className="card-content">
                 <h1 className="home-heading">Our Mission</h1>
@@ -40,7 +56,17 @@ const Home = () => {
                 </div>
                     </div>
                 </div>
-                <div className="card">
+                <div className="image-card">
+                <img className="home-card-image" alt="family-doing-homework" src="home_img_six.jpeg" />
+                </div>
+                </div>
+
+
+                <div className="text-image-div-2-4">
+                <div className="image-card">
+                <img className="home-card-image" alt="family-doing-homework" src="home_img_four.jpg" />
+                </div>
+                <div className="text-card">
                     <div className="card-top">
                         <div className="card-content">
                 <h1 className="home-heading">Get Involved</h1>
@@ -51,6 +77,9 @@ const Home = () => {
                 </div>
                     </div>
                 </div>
+                </div>
+
+
             </div>
             <div className="spacer"></div>
         </section>

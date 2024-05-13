@@ -8,13 +8,12 @@
 
 .overlay-text {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-80%, -80%);
-    color:cadetblue;
+    bottom: 10px; /* Bring it up slightly from the bottom */
+    left: 10px; /* Move it slightly from the left */
+    color: red;
     font-size: 24px;
     font-weight: bold;
-    text-align: center;
+    transform: translate(2.5%, -50%); /* Center the text slightly */
 }
 
 .home-heading {
@@ -49,7 +48,7 @@
     background-color: rgb(227, 183, 4);
 }
 
-.card {
+.text-card {
     background-color: white;
     border-radius: 20px; /* For rounded corners */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Creates a 3D embossed effect */
@@ -74,11 +73,11 @@
 }
 
 .card-content {
-    background-color: white; /* Ensures the content has a white background */
-    padding: 20px; /* Adds padding to create space around the content */
-    display: flex; /* Allows us to center the button horizontally */
-    flex-direction: column; /* Stacks the elements vertically */
-    justify-content: space-between; /* Vertically centers the content within the card */
+    background-color: white;
+    padding: 20px 20px 40px; /* Increased bottom padding for vertical centering */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content horizontally and vertically */
 }
 
 .home-heading {
@@ -95,7 +94,7 @@
 
 /* New rule for h3 text alignment and justification */
 .card-content h3 {
-    text-align: justify;
+    text-align: center;
     text-justify: inter-word; /* Ensures even spacing between words */
 }
 
@@ -104,19 +103,66 @@
 }
 
 .hero-card {
+    position: relative; /* Make hero-card a positioning context */
     background-color: black;
-    border-radius: 20px; /* For rounded corners */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Creates a 3D embossed effect */
-    margin: 20px auto; /* Adds margin for spacing */
-    padding: 20px; /* Adds padding inside the card */
-    width: 80%; /* Sets the width slightly larger than other cards */
-    display: flex; /* Allows us to style the image and text elements */
-    flex-direction: column; /* Stacks the elements vertically */
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    padding: 20px;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
 }
 
 .hero-card img {
     border-radius: 20px;
   }
+
+.image-card {
+    background-color: white;
+    border-radius: 20px; /* For rounded corners */
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Creates a 3D embossed effect */
+    margin: 20px auto; /* Adds margin for spacing */
+    padding: 20px; /* Adds padding inside the card */
+    width: 70%; /* Sets the width of the card to 70% of the screen width */
+    display: flex; /* Allows us to style the card-top and card-content elements */
+    flex-direction: column; /* Stacks the elements vertically */
+}
+
+.text-image-div-1-3,
+.text-image-div-2-4 {
+    display: flex;
+}
+
+.home-card-image {
+    height: 100%;
+    width: 100%;
+}
+
+.text-card,
+.image-card {
+    width: 45%; /* Reduce card width */
+}
+
+.card-gap {
+    width: 10%; /* Add space between cards */
+}
+
+@media screen and (max-width: 768px) {
+    .button-container {
+        flex-wrap: wrap; /* Wrap cards onto multiple lines */
+    }
+
+    .text-image-div-1-3,
+    .text-image-div-2-4 {
+        flex-direction: column; /* Stack cards vertically */
+        margin-bottom: 20px; /* Add space between stacked cards */
+    }
+
+    .card-gap {
+        display: none; /* Hide gap on small screens */
+    }
+}
 /* Media queries for responsive design */
 
 /* Small screens */
