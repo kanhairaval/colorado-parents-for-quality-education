@@ -7,7 +7,9 @@ const NavBar = () => {
     return (
         <div className="App">
             <ReactBootStrap.Navbar collapseOnSelect expand="xl" bg="light" variant="" className="navbar">
-                <ReactBootStrap.Navbar.Brand href="#home">CPQE</ReactBootStrap.Navbar.Brand>
+                <ReactBootStrap.Navbar.Brand href="#home">
+                    <img className="cpqe-logo" alt="cpqe-logo" src="CPQE-Logo (1).ico" />
+                </ReactBootStrap.Navbar.Brand>
                 <ReactBootStrap.Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <ReactBootStrap.Navbar.Collapse id="responsive-navbar-nav">
                     <ReactBootStrap.Nav className="mr-auto">

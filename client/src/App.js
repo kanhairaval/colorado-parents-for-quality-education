@@ -7,6 +7,8 @@ import Home from "./components/Home";
 import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
 import GetInvolved from "./components/GetInvolved";
+import Donate from "./components/Donate";
+import CareProgramApplication from "./components/CareProgramApplication";
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
           <Route path="/" Component={Home}/>
           <Route path="/AboutUs" Component={AboutUs}/>
           <Route path="/GetInvolved" Component={GetInvolved}/>
+          <Route path="/Donate" Component={Donate}/>
+          <Route path="/CareProgramApplication" Component={CareProgramApplication}/>
         </Routes>
         <Footer/>
     </Router>

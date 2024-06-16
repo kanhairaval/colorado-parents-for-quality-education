@@ -5,8 +5,7 @@ const Home = () => {
     return (
         <section className="home-section">
             <div className="hero-card">
-                <img className="home-bg-image" alt="family-doing-homework" src="family-doing-homework-img.jpg" />
-                <div className="overlay-text">Colorado Parents for Quality Education - Informed Parents, Thriving Children</div>
+                <img className="home-bg-image" alt="family-doing-homework" src="Colorado Parents for Quality Education (1).png" />
             </div>
             <div className="button-container">
 

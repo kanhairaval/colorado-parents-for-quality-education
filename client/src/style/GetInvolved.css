@@ -1,56 +1,66 @@
 .content-wrapper {
     min-height: 100vh; /* Set minimum height for full viewport */
-    margin-top: 100px; /* Add additional space above content (adjust as needed) */
-    padding-bottom: 60px; /* Add space before the footer */
-  }
-  
+    padding-top: 100px; /* Add padding above content to avoid overlapping with navbar */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(247, 203, 5);
+}
+
 .get-involved-section {
     text-align: center;
 }
 
-.join-mission {
-    margin: 0 auto;
-    max-width: 800px;
+.card {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 80%; /* Adjust width of the card */
+    max-width: 800px; /* Limit maximum width for larger screens */
+    margin: auto; /* Center the card horizontally */
+    margin-top: 20px; /* Add margin at the top */
+    margin-bottom: 20px; /* Add margin at the bottom */
 }
 
-.join-mission h2 {
+.get-involved-title {
+    font-size: 28px;
     font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.join-mission {
+    max-width: 600px; /* Limit max width for content inside the card */
+    margin: 0 auto; /* Center align content inside the card */
+    text-align: left; /* Left align text */
 }
 
 .join-mission ul {
     padding-left: 20px;
-    margin-bottom: 20px; /* Add bottom margin */
 }
 
 .join-mission ul li {
-    list-style: none; /* Remove default bullet points */
-}
-
-.join-mission ul li::before {
-    content: "\2022"; /* Add bullet character */
-    font-size: 1.5rem;
-    margin-right: 10px; /* Adjust spacing between bullet and text */
+    list-style-type: disc; /* Use disc bullets for list items */
+    margin-bottom: 10px; /* Add margin between list items */
 }
 
 .join-mission ul li strong {
     font-weight: bold;
 }
 
-.join-mission ul li:last-child::before {
-    margin-left: -10px; /* Adjust this value as needed */
-}
-
-.space-above {
-    margin-top: 20px; /* Add space above Join Our Mission */
-}
-
-.space-below {
-    margin-bottom: 20px; /* Add space below each section */
-}
-
-/* Media queries for responsive design */
+/* Responsive Design */
 @media screen and (max-width: 768px) {
+    .card {
+        width: 90%; /* Adjust card width for smaller screens */
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .card {
+        width: 95%; /* Adjust card width for even smaller screens */
+    }
+
     .join-mission {
-        max-width: 90%;
+        padding: 0 15px; /* Add horizontal padding to adjust content */
     }
 }

@@ -1,70 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.content-wrapper {
+  position: relative;
+  top: -50px;
+  padding-top: 85px; /* Add padding equal to the negative margin to offset the content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(247, 203, 5);
+}
+
 .about-us {
-    padding: 40px 0;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Ensure full width */
+}
+
+.container {
+  width: 80%; /* Leave 20% space to the left and right */
+  max-width: 800px; /* Limit maximum width for larger screens */
+}
+
+.card {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+.section-heading {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.section-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.sub-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.bullet-points {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.bullet-points li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* Responsive Styles */
+
+@media screen and (max-width: 768px) {
   .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
+    width: 90%; /* Leave 10% space to the left and right */
+    padding: 0 10px;
   }
-  
+
   .section-heading {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .section-description {
-    font-size: 16px;
-    margin-bottom: 20px;
-  }
-  
-  .sub-heading {
     font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
   }
-  
-  .bullet-points {
-    list-style-type: disc;
-    padding-left: 20px;
+
+  .section-description {
+    font-size: 14px;
   }
-  
+
+  .sub-heading {
+    font-size: 20px;
+  }
+
   .bullet-points li {
-    font-size: 16px;
-    margin-bottom: 10px;
+    font-size: 14px;
   }
-  
-  /* Responsive Styles */
-  
-  @media screen and (max-width: 768px) {
-    .container {
-      padding: 0 10px;
-    }
-  
-    .section-heading {
-      font-size: 24px;
-    }
-  
-    .section-description {
-      font-size: 14px;
-    }
-  
-    .sub-heading {
-      font-size: 20px;
-    }
-  
-    .bullet-points li {
-      font-size: 14px;
-    }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    width: 95%; /* Leave 5% space to the left and right */
+    padding: 0 5px;
   }
-  
-  @media screen and (max-width: 576px) {
-    .section-heading {
-      font-size: 20px;
-    }
-  
-    .sub-heading {
-      font-size: 18px;
-    }
-  }  
+
+  .section-heading {
+    font-size: 20px;
+  }
+
+  .sub-heading {
+    font-size: 18px;
+  }
+}

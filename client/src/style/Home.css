@@ -8,12 +8,13 @@
 
 .overlay-text {
     position: absolute;
-    bottom: 10px; /* Bring it up slightly from the bottom */
-    left: 10px; /* Move it slightly from the left */
-    color: red;
+    bottom: 5px; /* Bring it up slightly from the bottom */
+    left: 15px; /* Move it slightly from the left */
+    color: white;
     font-size: 24px;
     font-weight: bold;
     transform: translate(2.5%, -50%); /* Center the text slightly */
+    text-shadow: 3.5px 2.5px 3.5px rgba(0, 0, 10, 1);
 }
 
 .home-heading {
@@ -57,27 +58,26 @@
     width: 70%; /* Sets the width of the card to 70% of the screen width */
     display: flex; /* Allows us to style the card-top and card-content elements */
     flex-direction: column; /* Stacks the elements vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
 }
 
 .card-top {
     position: relative; /* Allows us to position the card-top-image on top of the card-content */
     overflow: hidden; /* Hides the overflowing part of the card-top-image */
-    border-radius: 20px 20px 0 0; /* Creates a curved top edge for the card */
-}
-
-.card-top-image {
-    width: 100%; /* Stretches the image to cover the entire card-top */
-    position: absolute; /* Positions the image on top of the card-content */
-    top: 0; /* Positions the image at the top of the card-top */
-    left: 0; /* Positions the image at the left of the card-top */
+    width: 100%; /* Ensure the card-top takes full width */
+    height: 100%; /* Ensure the card-top takes full height */
 }
 
 .card-content {
     background-color: white;
-    padding: 20px 20px 40px; /* Increased bottom padding for vertical centering */
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center content horizontally and vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    height: 100%; /* Ensure the content takes full height of the card */
+    text-align: center; /* Ensure text is centered horizontally */
 }
 
 .home-heading {
@@ -104,7 +104,7 @@
 
 .hero-card {
     position: relative; /* Make hero-card a positioning context */
-    background-color: black;
+    background-color: rgb(227, 183, 4);
     border-radius: 20px;
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
     margin: 20px auto;
@@ -119,12 +119,11 @@
   }
 
 .image-card {
-    background-color: white;
+    background-color: rgb(247, 203, 5);
     border-radius: 20px; /* For rounded corners */
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2); /* Creates a 3D embossed effect */
     margin: 20px auto; /* Adds margin for spacing */
     padding: 20px; /* Adds padding inside the card */
-    width: 70%; /* Sets the width of the card to 70% of the screen width */
     display: flex; /* Allows us to style the card-top and card-content elements */
     flex-direction: column; /* Stacks the elements vertically */
 }
