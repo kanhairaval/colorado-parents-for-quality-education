@@ -8,6 +8,10 @@ const Donate = () => {
                 <div className="card-content">
                     <h1 className="form-heading">Make a Donation</h1>
                     <form>
+                        <div className="input-group input-group-center">
+                            <label>Donation Amount</label>
+                            <input type="number" name="amount" className="small-width" placeholder="Enter amount" required />
+                        </div>
                         <div className="input-row">
                             <div className="input-group">
                                 <label>First Name</label>

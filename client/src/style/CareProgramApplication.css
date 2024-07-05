@@ -77,10 +77,16 @@
 .name-field {
     flex: 1;
     margin-right: 10px;
+    text-align: center;
 }
 
 .name-field:last-child {
     margin-right: 0;
+}
+
+.name-field label {
+    display: block;
+    margin-bottom: 5px;
 }
 
 ul {

@@ -3,15 +3,15 @@
 @tailwind utilities;
 
 .donation-section {
-    position: relative; /* Make sure the section is positioned relative to allow negative margin */
-    top: -100px; /* Adjust this value to match the height of your navbar */
-    padding-top: 116px; /* Add padding equal to the negative margin to offset the content */
+    position: relative;
+    top: -100px;
+    padding-top: 116px;
     display: flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 9px;
     background-color: rgb(247, 203, 5);
-    min-height: calc(100vh + 100px); /* Ensure the section covers the full height of the viewport plus the offset */
+    min-height: calc(100vh + 100px);
 }
 
 .donation-card {
@@ -25,12 +25,12 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 20px; /* Add margin-top to avoid overlapping with navbar */
+    margin-top: 20px;
 }
 
 .card-content {
     width: 100%;
-    padding: 20px; /* Add padding inside the card content */
+    padding: 20px;
 }
 
 .form-heading {
@@ -43,6 +43,12 @@
     margin-bottom: 10px;
     display: flex;
     flex-direction: column;
+}
+
+.input-group-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .input-row {
@@ -62,8 +68,13 @@
     border: 1px solid #ccc;
     font-size: 16px;
     width: 100%;
-    box-sizing: border-box; /* Ensure padding is included in the width */
-    margin-bottom: 10px; /* Add margin-bottom to all input fields for consistent spacing */
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+.small-width {
+    width: 50%;
+    max-width: 300px;
 }
 
 .form-button {
@@ -84,14 +95,11 @@
     background-color: rgb(227, 183, 4);
 }
 
-/* Media queries for responsive design */
-
-/* Extra small screens */
 @media screen and (max-width: 576px) {
     .donation-section {
-        top: -50px; /* Adjust the top offset */
-        padding-top: 66px; /* Adjust the top padding */
-        min-height: calc(100vh + 50px); /* Adjust the min-height */
+        top: -50px;
+        padding-top: 66px;
+        min-height: calc(100vh + 50px);
     }
 
     .donation-card {
@@ -116,12 +124,11 @@
     }
 }
 
-/* Small screens */
 @media screen and (min-width: 577px) and (max-width: 768px) {
     .donation-section {
-        top: -75px; /* Adjust the top offset */
-        padding-top: 91px; /* Adjust the top padding */
-        min-height: calc(100vh + 75px); /* Adjust the min-height */
+        top: -75px;
+        padding-top: 91px;
+        min-height: calc(100vh + 75px);
     }
 
     .donation-card {
@@ -137,7 +144,6 @@
     }
 }
 
-/* Medium screens */
 @media screen and (min-width: 769px) and (max-width: 992px) {
     .donation-card {
         width: 75%;
@@ -152,14 +158,12 @@
     }
 }
 
-/* Large screens */
 @media screen and (min-width: 993px) and (max-width: 1200px) {
     .donation-card {
         width: 70%;
     }
 }
 
-/* Extra large screens */
 @media screen and (min-width: 1201px) {
     .donation-card {
         width: 60%;

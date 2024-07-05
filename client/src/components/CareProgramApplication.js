@@ -15,10 +15,6 @@ const CareProgramApplication = () => {
                     </p>
                     
                     <form className="care-program-form">
-                        <div className="form-group center-align">
-                            <label>Date</label>
-                            <input type="text" className="form-control small-width" placeholder="Date" />
-                        </div>
                         <div className="form-group name-fields">
                             <div className="name-field">
                                 <label>First Name</label>
@@ -52,7 +48,7 @@ const CareProgramApplication = () => {
                                 </li>
                                 <li>
                                     <label>
-                                        <input type="checkbox" /> Attend a SAC or BAC meeting at your child's school - (OPTIONAL) - DATE________________ TEACHER'S NAME_____________________________________________________________
+                                        <input type="checkbox" /> Attend a SAC or BAC meeting at your child's school - (OPTIONAL)
                                     </label>
                                 </li>
                                 <li>
@@ -72,7 +68,7 @@ const CareProgramApplication = () => {
                                 </li>
                                 <li>
                                     <label>
-                                        <input type="checkbox" /> Attend a school event to learn more about the school, and or get your child involved in school programs - (MANDATORY) - DATE______________ EVENT_________________________________________________
+                                        <input type="checkbox" /> Attend a school event to learn more about the school, and or get your child involved in school programs - (MANDATORY)
                                     </label>
                                 </li>
                             </ul>

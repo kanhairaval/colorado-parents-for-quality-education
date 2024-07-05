@@ -1,5 +1,6 @@
 import React from 'react';
 import "../style/AboutUs.css";
+import { Link } from 'react-router-dom';
 
 const AboutUs = () => {
   return (
@@ -21,7 +22,9 @@ const AboutUs = () => {
             <h3 className="sub-heading">CPQE's Programs and Initiatives:</h3>
             <ul className="bullet-points">
               <li><strong>Free Book Give-Away Programs:</strong> We distribute age-appropriate books to children from low-income families, nurturing a love for reading and fostering literacy skills.</li>
-              <li><strong>C.A.R.E. Program:</strong> This innovative program provides financial assistance to help families cover the cost of after-school tutoring and enrichment activities, unlocking access to valuable learning opportunities.</li>
+              <Link to = "/careprogramapplication">
+                <li><strong>C.A.R.E. Program:</strong> This innovative program provides financial assistance to help families cover the cost of after-school tutoring and enrichment activities, unlocking access to valuable learning opportunities.</li>
+              </Link>
               <li><strong>Workshops and Training:</strong> We organize informative workshops and training sessions, empowering parents to advocate for their children's needs, understand their rights, and navigate the education system effectively.</li>
               <li><strong>Community Building Initiatives:</strong> We facilitate parent support groups and networking events, creating a sense of belonging and fostering collaboration among families.</li>
             </ul>
