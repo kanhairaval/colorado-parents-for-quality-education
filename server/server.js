@@ -3,6 +3,8 @@ const express = require("express"); //Importing the express module to set up the
 
 const path = require("path");
 
+const cors = require("cors");
+
 const sequelize = require("./config/connection"); //Importing connection file to establish connection between the server & the database
 
 const api = require("./routes/index"); //Importing the index.js file file from the routes folder
@@ -15,6 +17,12 @@ const PORT = process.env.PORT || 3001; //Declaring port varibale and assigning v
 
 app.use(express.json()); //Middleware so that incoming request are parsed in json format
 app.use(express.urlencoded({ extended: true })); //Middleware so that information coming from the url/html forms is parsed in json format
+
+app.use(cors({
+    origin: 'http://localhost:3000', // Allow requests from this origin
+    methods: ['GET', 'POST'], // Allow GET and POST requests
+    allowedHeaders: ['Content-Type'], // Allow Content-Type header
+}));
 
 app.use("/api", api); //Custom middleware telling the server to use the index file from the routes folder once server has started
 

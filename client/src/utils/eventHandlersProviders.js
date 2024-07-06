@@ -1,33 +1,4 @@
-import { useState } from 'react';
-import axios from 'axios';
-
-export const useForm = (initialState) => {
-  const [formData, setFormData] = useState(initialState);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
-
-  const handleFormSubmit = async (formData, endpoint) => {
-    try {
-      const response = await axios.post(endpoint, formData);
-      console.log(response.data); // Log the response from the server
-      // Handle success state or redirect as needed
-    } catch (error) {
-      console.error('Error submitting form data:', error);
-      // Handle error state
-    }
-  };
-
-  return {
-    formData,
-    handleChange,
-    handleFormSubmit,
-  };
-};
-
-export const handleCareApplicationSubmit = (event) => {
+export const handleCareApplicationSubmit = async (event) => {
     event.preventDefault();
 
     // Retrieve form data
@@ -56,14 +27,85 @@ export const handleCareApplicationSubmit = (event) => {
 
     // Construct the data object to be sent
     const formData = {
-        firstName,
-        lastName,
+        first_name: firstName,
+        last_name: lastName,
         email,
-        childrenCount: childrenCountNumber,
-        requirements
+        number_of_children: childrenCountNumber,
+        commitments: requirements
     };
 
-    // Here you can handle the form submission, e.g., send data to an API
-    console.log('Form data submitted:', formData);
-    alert('Form submitted successfully!');
+    try {
+        console.log("Submitting form data:", formData); // Log form data before sending
+
+        const response = await fetch('/api/careApplication', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        });
+
+        console.log("Server response:", response); // Log server response
+
+        if (response.ok) {
+            alert('Form submitted successfully!');
+        } else {
+            alert('Failed to submit form.');
+        }
+    } catch (error) {
+        console.error('Error submitting form:', error);
+        alert('Error submitting form.');
+    }
+};
+
+export const handleDonateSubmit = async (event) => {
+    event.preventDefault();
+
+    // Retrieve form data
+    const form = event.target;
+    const amount = parseFloat(form.amount.value.trim());
+    const firstName = form.firstName.value.trim();
+    const lastName = form.lastName.value.trim();
+    const cardNumber = form.cardNumber.value.trim();
+    const expiryDate = form.expiryDate.value.trim();
+    const cvv = form.cvv.value.trim();
+    const billingAddress1 = form.billingAddress1.value.trim();
+    const billingAddress2 = form.billingAddress2.value.trim();
+    const city = form.city.value.trim();
+    const state = form.state.value.trim();
+    const zipCode = form.zipCode.value.trim();
+    const email = form.email.value.trim();
+
+    // Check if mandatory fields are filled and donation amount is greater than zero
+    if (isNaN(amount) || amount <= 0 || !firstName || !lastName || !cardNumber || !expiryDate || !cvv || !billingAddress1 || !city || !state || !zipCode || !email) {
+        alert("Form can't be submitted until all mandatory information is provided and the donation amount is greater than zero.");
+        return;
+    }
+
+    // Construct the data object to be sent
+    const formData = {
+        first_name: firstName,
+        last_name: lastName,
+        email,
+        amount,
+    };
+
+    try {
+        const response = await fetch('/api/donation', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        });
+
+        if (response.ok) {
+            alert('Donation submitted successfully!');
+        } else {
+            alert('Failed to process donation.');
+        }
+    } catch (error) {
+        console.error('Error processing donation:', error);
+        alert('Error processing donation.');
+    }
 };

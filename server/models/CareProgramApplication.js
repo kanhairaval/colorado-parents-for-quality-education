@@ -1,50 +1,41 @@
-const { Model, DataTypes } = require("sequelize");
-const sequelize = require("../config/connection");
+const { DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
 
-class CareProgramApplication extends Model {}
-
-CareProgramApplication.init(
-    {
-        id: {
-            type: DataTypes.UUID,
-            allowNull: false,
-            primaryKey: true,
-            defaultValue: DataTypes.UUIDV4, // Automatically generate UUID
-        },
-        first_name: {
-            type: DataTypes.STRING(20),
-            allowNull: false,
-        },
-        last_name: {
-            type: DataTypes.STRING(20),
-            allowNull: false,
-        },
-        email: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                isEmail: true, // Ensures the value is a valid email address
-            },
-        },
-        number_of_children: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            validate: {
-                min: 0, // Ensures the number is not negative
-            },
-        },
-        commitments: {
-            type: DataTypes.ARRAY(DataTypes.STRING), // Array of strings to store commitments
-            allowNull: false,
-        },
+const CareProgramApplication = sequelize.define('careprogramapplication', {
+  id: {
+    type: DataTypes.UUID,
+    defaultValue: DataTypes.UUIDV4,
+    allowNull: false,
+    primaryKey: true,
+  },
+  first_name: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  last_name: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  email: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  number_of_children: {
+    type: DataTypes.INTEGER,
+    allowNull: false,
+  },
+  commitments: {
+    type: DataTypes.JSON, // Store as JSON string
+    allowNull: false,
+    defaultValue: '[]', // Default value for an empty array
+    get() {
+      const rawValue = this.getDataValue('commitments');
+      return JSON.parse(rawValue || '[]');
     },
-    {
-        sequelize,
-        timestamps: false,
-        freezeTableName: true,
-        underscored: true,
-        modelName: 'careprogramapplication',
-    }
-);
+    set(value) {
+      this.setDataValue('commitments', JSON.stringify(value || []));
+    },
+  },
+});
 
 module.exports = CareProgramApplication;
