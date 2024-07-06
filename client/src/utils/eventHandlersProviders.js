@@ -1,3 +1,32 @@
+import { useState } from 'react';
+import axios from 'axios';
+
+export const useForm = (initialState) => {
+  const [formData, setFormData] = useState(initialState);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleFormSubmit = async (formData, endpoint) => {
+    try {
+      const response = await axios.post(endpoint, formData);
+      console.log(response.data); // Log the response from the server
+      // Handle success state or redirect as needed
+    } catch (error) {
+      console.error('Error submitting form data:', error);
+      // Handle error state
+    }
+  };
+
+  return {
+    formData,
+    handleChange,
+    handleFormSubmit,
+  };
+};
+
 export const handleCareApplicationSubmit = (event) => {
     event.preventDefault();
 
