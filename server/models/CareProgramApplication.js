@@ -1,11 +1,9 @@
-const { Model, DataTypes } = require("sequelize"); // Extracting the Model & DataTypes methods from the sequelize module to create model with datatypes
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
-const sequelize = require("../config/connection"); // importing to connect model to the database connection
+class CareProgramApplication extends Model {}
 
-class UserDonationInfo extends Model {} // Inheriting all methods & properties from Model object
-
-// Creating an instance of the Model object called UserDonationInfo
-UserDonationInfo.init(
+CareProgramApplication.init(
     {
         id: {
             type: DataTypes.UUID,
@@ -28,22 +26,25 @@ UserDonationInfo.init(
                 isEmail: true, // Ensures the value is a valid email address
             },
         },
-        amount: {
-            type: DataTypes.FLOAT, // Using FLOAT to store the donation amount
+        number_of_children: {
+            type: DataTypes.INTEGER,
             allowNull: false,
             validate: {
-                min: 0, // Ensures the donation amount is not negative
+                min: 0, // Ensures the number is not negative
             },
+        },
+        commitments: {
+            type: DataTypes.ARRAY(DataTypes.STRING), // Array of strings to store commitments
+            allowNull: false,
         },
     },
     {
-        // Properties for the model configuration
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'userdonationinfo',
+        modelName: 'careprogramapplication',
     }
 );
 
-module.exports = UserDonationInfo;
+module.exports = CareProgramApplication;

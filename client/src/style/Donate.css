@@ -169,3 +169,9 @@
         width: 60%;
     }
 }
+
+/* Required field styles */
+.required {
+    color: red;
+    margin-left: 2px;
+}

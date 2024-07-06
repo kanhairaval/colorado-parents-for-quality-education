@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .content-wrapper {
     padding-top: 120px;
     display: flex;
@@ -121,4 +125,10 @@ ul li label {
 .btn-primary:hover,
 .homepage-buttons:hover {
     background-color: rgb(227, 183, 4);
+}
+
+/* Required field styles */
+.required {
+    color: red;
+    margin-left: 2px;
 }
