@@ -6,6 +6,7 @@ router.use("/userDonation", userDonation); //Custom middleware using the router 
 
 const careApplication = require("./careApplication"); // Importing the care application route
 
+console.log("routes/api/index.js: Setting up /userDonation and /careApplication routes");
 router.use("/careApplication", careApplication); //Custom middleware using the router functionality asking the application to serve the file careApplication when that route is reached
 
 module.exports = router;

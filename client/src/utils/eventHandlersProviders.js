@@ -37,7 +37,7 @@ export const handleCareApplicationSubmit = async (event) => {
     try {
         console.log("Submitting form data:", formData); // Log form data before sending
 
-        const response = await fetch('/api/careApplication', {
+        const response = await fetch('http://localhost:3001/api/careApplication', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -91,7 +91,7 @@ export const handleDonateSubmit = async (event) => {
     };
 
     try {
-        const response = await fetch('/api/donation', {
+        const response = await fetch('http://localhost:3001/api/userDonation', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

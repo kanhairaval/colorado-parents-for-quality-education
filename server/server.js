@@ -7,7 +7,7 @@ const cors = require("cors");
 
 const sequelize = require("./config/connection"); //Importing connection file to establish connection between the server & the database
 
-const api = require("./routes/index"); //Importing the index.js file file from the routes folder
+const api = require("./routes/api/index"); //Importing the index.js file file from the routes folder
 
 require("dotenv").config(); //Importing dotenv file/library to sync environment varibales
 
@@ -24,6 +24,7 @@ app.use(cors({
     allowedHeaders: ['Content-Type'], // Allow Content-Type header
 }));
 
+console.log("server.js: Setting up routes");
 app.use("/api", api); //Custom middleware telling the server to use the index file from the routes folder once server has started
 
 //Syncing the database with the server, asking sequelize not to drop and create new models every time the server starts and asking the server to start and for the app to listen on PORT varibale

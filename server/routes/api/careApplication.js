@@ -1,6 +1,8 @@
 const router = require("express").Router();
 const CareProgramApplication = require("../../models/CareProgramApplication");
 
+console.log("careApplication.js: Setting up POST / route");
+
 router.post("/", async (req, res) => {
     try {
         console.log("Incoming request body:", req.body); // Log incoming request body
